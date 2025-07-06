@@ -80,7 +80,7 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 ## 📊 Performance Metrics
 
 
-# ![Performance Stats](assets/stats.png)
+# ![Performance Stats](assets/stats3.png) # ![Performance Stats](assets/cmd_stats.png) 
 
 # 🖥️ Web Dashboard & API
 

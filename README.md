@@ -1,6 +1,13 @@
 # Edge AI Smart Home Assistant
+<<<<<<< HEAD
 
 ![Dashboard Screenshot](assets/UI1.png)
+=======
+This project is a sophisticated, privacy-focused smart home assistant designed to run locally on ARM-based edge devices like the NVIDIA Jetson or Raspberry Pi. It uses a local Ollama instance for natural language understanding, allowing for complex and conversational command processing without relying on cloud services. The assistant can control GPIO-connected devices, manage energy usage, and be controlled via a command-line interface or a web-based dashboard with a full API.
+
+# 🤖 Edge AI on ARM Architecture
+This project serves as a powerful demonstration of Edge AI running efficiently on the ARM architecture. By leveraging ARM-based single-board computers (like the NVIDIA Jetson or Raspberry Pi), we can run a sophisticated language model locally, bringing the power of AI to the edge with significant advantages:
+>>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 A **privacy-focused, local-first smart home assistant** designed for ARM-based edge devices (NVIDIA Jetson, Raspberry Pi). Powered by Ollama and Deepseek, it delivers conversational AI, direct hardware control, and intelligent automation—**all without the cloud**.
 
@@ -19,7 +26,12 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 ---
 
+<<<<<<< HEAD
 ## 🖥️ Web Dashboard & API
+=======
+# ✨ Features
+Local First, Privacy-Focused: All command processing is done locally using Ollama.
+>>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 ![Web Dashboard](assets/UI2.png)
 
@@ -39,7 +51,12 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 ## 📊 Performance Metrics
 
+<<<<<<< HEAD
 ![Performance Stats](assets/stats.png)
+=======
+# 🖥️ Web Dashboard & API
+The assistant includes a web-based dashboard and a comprehensive API, allowing for easy control and monitoring of your smart home.
+>>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 | Metric         | Value    | Description                           |
 | -------------- | -------- | ------------------------------------- |

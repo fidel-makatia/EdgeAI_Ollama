@@ -11,7 +11,7 @@ This project is a sophisticated, privacy-focused smart home assistant designed t
 
 This project serves as a powerful demonstration of Edge AI running efficiently on the ARM architecture. By leveraging ARM-based single-board computers (like the NVIDIA Jetson or Raspberry Pi), we can run a sophisticated language model locally, bringing the power of AI to the edge with significant advantages:
 
-> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
 
 A **privacy-focused, local-first smart home assistant** designed for ARM-based edge devices (NVIDIA Jetson, Raspberry Pi). Powered by Ollama and Deepseek, it delivers conversational AI, direct hardware control, and intelligent automation—**all without the cloud**.
 
@@ -49,7 +49,7 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 ---
 
-> > > > > > > 6c6dbea60d5dfb7663f8f784c75932b6f31a157f
+
 
 ## 🖥️ Web Dashboard & API
 
@@ -59,7 +59,7 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 Local First, Privacy-Focused: All command processing is done locally using Ollama.
 
-> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
 
 ![Web Dashboard](assets/UI2.png)
 
@@ -79,11 +79,6 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 
 ## 📊 Performance Metrics
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-> > > > > > > 6c6dbea60d5dfb7663f8f784c75932b6f31a157f
 
 # ![Performance Stats](assets/stats.png)
 
@@ -91,7 +86,7 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 
 The assistant includes a web-based dashboard and a comprehensive API, allowing for easy control and monitoring of your smart home.
 
-> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
 
 | Metric         | Value    | Description                           |
 | -------------- | -------- | ------------------------------------- |

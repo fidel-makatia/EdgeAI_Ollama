@@ -1,7 +1,7 @@
-Edge AI Smart Home Assistant
+# Edge AI Smart Home Assistant
 This project is a sophisticated, privacy-focused smart home assistant designed to run locally on ARM-based edge devices like the NVIDIA Jetson or Raspberry Pi. It uses a local Ollama instance for natural language understanding, allowing for complex and conversational command processing without relying on cloud services. The assistant can control GPIO-connected devices, manage energy usage, and be controlled via a command-line interface or a web-based dashboard with a full API.
 
-🤖 Edge AI on ARM Architecture
+# 🤖 Edge AI on ARM Architecture
 This project serves as a powerful demonstration of Edge AI running efficiently on the ARM architecture. By leveraging ARM-based single-board computers (like the NVIDIA Jetson or Raspberry Pi), we can run a sophisticated language model locally, bringing the power of AI to the edge with significant advantages:
 
 Privacy-Focused: All data and command processing happen on your local network. Nothing is sent to the cloud, ensuring your personal information remains private.
@@ -14,7 +14,7 @@ Reliability: The system continues to function perfectly even if your internet co
 
 This assistant proves that complex, practical AI applications are not limited to data centers and can be deployed effectively in a home environment on accessible, energy-efficient hardware.
 
-✨ Features
+# ✨ Features
 Local First, Privacy-Focused: All command processing is done locally using Ollama.
 
 Natural Language Understanding: Powered by the Deepseek model, it understands complex, conversational commands.
@@ -29,7 +29,7 @@ Customizable Scenes & Automations: Easily define custom scenes and automation ru
 
 Performance Monitoring: Real-time metrics for LLM speed and command latency.
 
-🖥️ Web Dashboard & API
+# 🖥️ Web Dashboard & API
 The assistant includes a web-based dashboard and a comprehensive API, allowing for easy control and monitoring of your smart home.
 
 Dashboard

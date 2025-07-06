@@ -1,6 +1,6 @@
 # Edge AI Smart Home Assistant
 
-# ![Dashboard Screenshot](assets/UI1.png)
+# ![Dashboard Screenshot](assets/hardware1.jpeg)
 
 ![Dashboard Screenshot](assets/UI4.png)
 

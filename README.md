@@ -1,13 +1,17 @@
 # Edge AI Smart Home Assistant
-<<<<<<< HEAD
 
-![Dashboard Screenshot](assets/UI1.png)
+# ![Dashboard Screenshot](assets/UI1.png)
+
+![Dashboard Screenshot](assets/UI4.png)
+
 =======
 This project is a sophisticated, privacy-focused smart home assistant designed to run locally on ARM-based edge devices like the NVIDIA Jetson or Raspberry Pi. It uses a local Ollama instance for natural language understanding, allowing for complex and conversational command processing without relying on cloud services. The assistant can control GPIO-connected devices, manage energy usage, and be controlled via a command-line interface or a web-based dashboard with a full API.
 
 # 🤖 Edge AI on ARM Architecture
+
 This project serves as a powerful demonstration of Edge AI running efficiently on the ARM architecture. By leveraging ARM-based single-board computers (like the NVIDIA Jetson or Raspberry Pi), we can run a sophisticated language model locally, bringing the power of AI to the edge with significant advantages:
->>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
+> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 A **privacy-focused, local-first smart home assistant** designed for ARM-based edge devices (NVIDIA Jetson, Raspberry Pi). Powered by Ollama and Deepseek, it delivers conversational AI, direct hardware control, and intelligent automation—**all without the cloud**.
 
@@ -26,12 +30,36 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 ---
 
-<<<<<<< HEAD
-## 🖥️ Web Dashboard & API
 =======
+
+A **privacy-focused, local-first smart home assistant** designed for ARM-based edge devices (NVIDIA Jetson, Raspberry Pi). Powered by Ollama and Deepseek, it delivers conversational AI, direct hardware control, and intelligent automation—**all without the cloud**.
+
+---
+
+## 🚀 Key Features
+
+- **Local AI Inference:** All natural language processing runs on-device using Ollama and Deepseek.
+- **Privacy & Security:** No data leaves your local network.
+- **Low Latency:** Instant responses—no cloud round-trips.
+- **Direct GPIO Control:** Manage lights, fans, and more via GPIO pins.
+- **Web Dashboard & API:** Clean web UI and REST API for control and monitoring.
+- **Energy Management:** Proactively saves energy by turning off unused devices.
+- **Custom Scenes & Automations:** Easily define and trigger complex routines.
+- **Performance Monitoring:** Real-time metrics for LLM speed and command latency.
+
+---
+
+> > > > > > > 6c6dbea60d5dfb7663f8f784c75932b6f31a157f
+
+## 🖥️ Web Dashboard & API
+
+=======
+
 # ✨ Features
+
 Local First, Privacy-Focused: All command processing is done locally using Ollama.
->>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
+> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 ![Web Dashboard](assets/UI2.png)
 
@@ -52,11 +80,18 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 ## 📊 Performance Metrics
 
 <<<<<<< HEAD
-![Performance Stats](assets/stats.png)
+<<<<<<< HEAD
 =======
+
+> > > > > > > 6c6dbea60d5dfb7663f8f784c75932b6f31a157f
+
+# ![Performance Stats](assets/stats.png)
+
 # 🖥️ Web Dashboard & API
+
 The assistant includes a web-based dashboard and a comprehensive API, allowing for easy control and monitoring of your smart home.
->>>>>>> 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
+
+> > > > > > > 9bd2d6710c3959d9e100debc3b4ce5d7f89e40de
 
 | Metric         | Value    | Description                           |
 | -------------- | -------- | ------------------------------------- |

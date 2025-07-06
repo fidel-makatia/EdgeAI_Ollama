@@ -62,7 +62,8 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 
 
 ![Web Dashboard](assets/security2.png)
-
+![Web Dashboard](assets/sec1.png)
+![Web Dashboard](assets/LLMraw_out3.png)
 - **Voice & Text Commands:** Interact naturally.
 - **Device Control:** Toggle, monitor, and automate devices.
 - **Status Reports:** Real-time device and system status.

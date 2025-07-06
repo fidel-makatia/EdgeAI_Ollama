@@ -1,8 +1,8 @@
 # Edge AI Smart Home Assistant
 
-# ![Dashboard Screenshot](assets/hardware1.jpeg)
+# ![Dashboard Screenshot](assets/UI4.png) 
 
-![Dashboard Screenshot](assets/UI4.png)
+![Dashboard Screenshot](assets/hardware1.jpeg)
 
 =======
 This project is a sophisticated, privacy-focused smart home assistant designed to run locally on ARM-based edge devices like the NVIDIA Jetson or Raspberry Pi. It uses a local Ollama instance for natural language understanding, allowing for complex and conversational command processing without relying on cloud services. The assistant can control GPIO-connected devices, manage energy usage, and be controlled via a command-line interface or a web-based dashboard with a full API.

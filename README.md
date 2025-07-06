@@ -1,269 +1,207 @@
-Edge AI Smart Home Assistant
-This project is a sophisticated, privacy-focused smart home assistant designed to run locally on ARM-based edge devices like the NVIDIA Jetson or Raspberry Pi. It uses a local Ollama instance for natural language understanding, allowing for complex and conversational command processing without relying on cloud services. The assistant can control GPIO-connected devices, manage energy usage, and be controlled via a command-line interface or a web-based dashboard with a full API.
+# Edge AI Smart Home Assistant
 
-🤖 Edge AI on ARM Architecture
-This project serves as a powerful demonstration of Edge AI running efficiently on the ARM architecture. By leveraging ARM-based single-board computers (like the NVIDIA Jetson or Raspberry Pi), we can run a sophisticated language model locally, bringing the power of AI to the edge with significant advantages:
+![Dashboard Screenshot](assets/UI1.png)
 
-Privacy-Focused: All data and command processing happen on your local network. Nothing is sent to the cloud, ensuring your personal information remains private.
+A **privacy-focused, local-first smart home assistant** designed for ARM-based edge devices (NVIDIA Jetson, Raspberry Pi). Powered by Ollama and Deepseek, it delivers conversational AI, direct hardware control, and intelligent automation—**all without the cloud**.
 
-Low Latency: Commands are executed instantly without the round-trip delay of cloud-based services, resulting in a more responsive and natural user experience.
+---
 
-Power Efficiency: The ARM-based architecture provides the computational power needed for AI inference while consuming significantly less power than traditional desktop or server hardware.
+## 🚀 Key Features
 
-Reliability: The system continues to function perfectly even if your internet connection goes down.
+- **Local AI Inference:** All natural language processing runs on-device using Ollama and Deepseek.
+- **Privacy & Security:** No data leaves your local network.
+- **Low Latency:** Instant responses—no cloud round-trips.
+- **Direct GPIO Control:** Manage lights, fans, and more via GPIO pins.
+- **Web Dashboard & API:** Clean web UI and REST API for control and monitoring.
+- **Energy Management:** Proactively saves energy by turning off unused devices.
+- **Custom Scenes & Automations:** Easily define and trigger complex routines.
+- **Performance Monitoring:** Real-time metrics for LLM speed and command latency.
 
-This assistant proves that complex, practical AI applications are not limited to data centers and can be deployed effectively in a home environment on accessible, energy-efficient hardware.
+---
 
-✨ Features
-Local First, Privacy-Focused: All command processing is done locally using Ollama.
+## 🖥️ Web Dashboard & API
 
-Natural Language Understanding: Powered by the Deepseek model, it understands complex, conversational commands.
+![Web Dashboard](assets/UI2.png)
 
-Direct GPIO Control: Interfaces directly with hardware via GPIO pins to control lights, fans, etc.
+- **Voice & Text Commands:** Interact naturally.
+- **Device Control:** Toggle, monitor, and automate devices.
+- **Status Reports:** Real-time device and system status.
 
-Web Dashboard & API: A clean web interface and a full API for control and monitoring.
+**API Endpoints:**
 
-Intelligent Energy Management: Proactively saves energy by turning off unused devices.
+- `GET /` — Main dashboard
+- `POST /api/command` — Process text/voice commands
+- `GET /api/status` — Device/context status
+- `POST /api/device/toggle` — Toggle device
+- `POST /api/scene/activate` — Activate scene
 
-Customizable Scenes & Automations: Easily define custom scenes and automation rules.
+---
 
-Performance Monitoring: Real-time metrics for LLM speed and command latency.
+## 📊 Performance Metrics
 
-🖥️ Web Dashboard & API
-The assistant includes a web-based dashboard and a comprehensive API, allowing for easy control and monitoring of your smart home.
+![Performance Stats](assets/stats.png)
 
-Dashboard
-The dashboard provides a user-friendly interface for all major functions:
+| Metric         | Value    | Description                           |
+| -------------- | -------- | ------------------------------------- |
+| Tokens/Second  | ~12.0    | Deepseek LLM generation speed         |
+| Avg. Latency   | ~1–8s    | Command processing time               |
+| Power Usage    | ~60–140W | Depends on active devices             |
+| Cache Hit Rate | ~5–15%   | Reduces latency for repeated commands |
 
-Voice and Text Commands:
+---
 
-Device Control:
+## ⚡ Getting Started
 
-Status Reports:
+### Prerequisites
 
-API Endpoints
-The project runs a Flask server with the following endpoints:
+- ARM-based SBC (NVIDIA Jetson, Raspberry Pi)
+- Python 3.8+
+- Compatible GPIO library (e.g., Jetson.GPIO, RPi.GPIO)
 
-GET /: Serves the main dashboard.
+### Installation
 
-POST /api/command: Processes text/voice commands.
-
-GET /api/status: Returns the current status of all devices and context.
-
-POST /api/device/toggle: Toggles a specific device.
-
-POST /api/scene/activate: Activates a predefined scene.
-
-📊 Performance Metrics
-The assistant is optimized to run efficiently on edge devices. Here are some real-world performance metrics captured during operation on an NVIDIA Jetson:
-
-Metric
-
-Value
-
-Description
-
-Tokens/Second
-
-~12.0
-
-The generation speed of the local Deepseek LLM.
-
-Avg. Latency
-
-~1-8s
-
-Varies based on command complexity and caching.
-
-Power Usage
-
-~60-140W
-
-Varies based on the number of active devices.
-
-Cache Hit Rate
-
-~5-15%
-
-Reduces latency for repeated commands.
-
-These metrics demonstrate the viability of running a powerful, responsive AI assistant directly on an energy-efficient ARM device.
-
-🚀 Getting Started
-Follow these instructions to get your smart home assistant up and running.
-
-Prerequisites
-An ARM-based single-board computer (e.g., NVIDIA Jetson, Raspberry Pi) with a compatible GPIO library installed (e.g., Jetson.GPIO, RPi.GPIO).
-
-Python 3.8 or higher.
-
-Installation & Setup
-Clone the repository:
-
-git clone [https://github.com/fidel-makatia/EdgeAI_Ollama.git](https://github.com/fidel-makatia/EdgeAI_Ollama.git)
+```bash
+git clone https://github.com/fidel-makatia/EdgeAI_Ollama.git
 cd EdgeAI_Ollama
-
-Create and activate a virtual environment:
 
 python3 -m venv smart_home_env
 source smart_home_env/bin/activate
 
-Install Ollama:
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull deepseek-r1:7b  # Recommended model
 
-curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
-
-Pull an Ollama model: The script defaults to deepseek-r1:7b, which is recommended for its balance of performance and understanding.
-
-# Pull recommended model
-
-ollama pull deepseek-r1:7b
-
-# Alternative models you can try:
-
+# Optional: Try other models
 ollama pull llama2:7b
 ollama pull mistral:7b
-ollama pull phi:2.7b # Smaller, faster model
-
-Install required Python packages:
+ollama pull phi:2.7b
 
 pip install ollama flask flask-cors schedule Jetson.GPIO
-
 # Optional: For environmental sensors
-
 pip install adafruit-circuitpython-dht
+```
 
-Running the Assistant
-Execute the main script from your terminal.
+### Running the Assistant
 
-# With default model (deepseek-r1:7b)
-
+```bash
+# Default model
 python3 smart_home_assistant.py
 
-# With a different model
-
+# Specify model
 python3 smart_home_assistant.py --model llama2:7b
 
-# With custom port for web dashboard
-
+# Custom web port
 python3 smart_home_assistant.py --port 8080
 
-# CLI only (no web interface)
-
+# CLI only
 python3 smart_home_assistant.py --no-api
+```
 
-Once running, you can access the web dashboard at http://<your-device-ip>:5000 (or your custom port).
+Access the dashboard at:  
+`http://<your-device-ip>:5000` (or your custom port)
 
-⚙️ Usage & Output
-You can interact with the assistant through the CLI or the web dashboard.
+---
 
-Example Output
-Here is an example of the interaction with the assistant in the command-line interface:
+## ⚙️ Usage Example
 
+**CLI Interaction:**
+
+```
 You: I'm cold
 🤔 Using Deepseek model for command...
 🤖 LLM Raw Output: {
-"intent": "set_temperature",
-"devices": null,
-"scene": null,
-"value": "increase",
-"reasoning": "User is cold, so I will increase the temperature. This will turn on heaters and turn off ACs."
+    "intent": "set_temperature",
+    "devices": null,
+    "scene": null,
+    "value": "increase",
+    "reasoning": "User is cold, so I will increase the temperature. This will turn on heaters and turn off ACs."
 }
-
 🤖 Assistant: Heating mode activated. Current temperature: 72°F
 💭 Logic: User is cold, so I will increase the temperature. This will turn on heaters and turn off ACs.
 ⏱️ [1234ms]
+```
 
-Special Commands
-status: Get a full report of all device states and context.
+**Special Commands:**
 
-perf: See the latest performance metrics.
+- `status` — Full device/context report
+- `perf` — Performance metrics
+- `help` — Command types
+- `quit` — Shut down
 
-help: Display available command types.
+---
 
-quit: Shut down the assistant.
+## 📂 File Structure
 
-📂 File Structure
-The repository is structured as follows:
-
+```
 EdgeAI_Ollama/
 ├── assets/
-│ ├── UI1.png
-│ ├── UI2.png
-│ ├── UI3.png
-│ └── stats.png
-├── smart_home_assistant.py # Main application script
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+│   ├── UI1.png
+│   ├── UI2.png
+│   ├── UI3.png
+│   └── stats.png
+├── smart_home_assistant.py   # Main application
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
 
-🔧 Configuration
-All device, scene, and automation configurations are handled within the smart_home_assistant.py script.
+---
 
-Adding a New Device
-Open the script and navigate to the \_init_devices method.
+## 🔧 Configuration
 
-Add a new entry to the self.devices dictionary. You will need to define:
+All configuration is handled in `smart_home_assistant.py`.
 
-name: A unique identifier (e.g., office_light).
+### Adding a Device
 
-pin: The GPIO pin number (BOARD mode) the device is connected to.
+In `_init_devices`, add to `self.devices`:
 
-device_type: The type of device (e.g., DeviceType.LIGHT).
-
-aliases: A list of friendly names for the device.
-
-room: The room the device is in.
-
-power_consumption: The device's power usage in watts (for energy monitoring).
-
-Example:
-
+```python
 'office_light': Device(
-name='office_light',
-pin=33,
-device_type=DeviceType.LIGHT,
-aliases=['office light', 'desk lamp'],
-room='office',
-power_consumption=15
+        name='office_light',
+        pin=33,
+        device_type=DeviceType.LIGHT,
+        aliases=['office light', 'desk lamp'],
+        room='office',
+        power_consumption=15
 ),
+```
 
-Creating a New Scene
-Navigate to the \_init_automation_rules method.
+### Creating a Scene
 
-Add a new entry to the self.scenes dictionary.
+In `_init_automation_rules`, add to `self.scenes`:
 
-Define the devices you want to control and their desired state (True for on, False for off).
-
-Example:
-
+```python
 'work_mode': {
-'devices': {
-'office_light': True,
-'living_room_light': False,
-'living_room_fan': False,
+        'devices': {
+                'office_light': True,
+                'living_room_light': False,
+                'living_room_fan': False,
+        },
+        'description': 'Sets up the office for work.'
 },
-'description': 'Sets up the office for work.'
-},
+```
 
-🛠️ Technology Stack
-Backend: Python 3
+---
 
-Web Framework: Flask
+## 🛠️ Technology Stack
 
-Natural Language Processing: Ollama with Deepseek
+- **Backend:** Python 3
+- **Web:** Flask
+- **NLP:** Ollama + Deepseek
+- **Hardware:** Jetson.GPIO (or compatible)
+- **Scheduling:** schedule
+- **Frontend:** HTML, CSS, JavaScript (no frameworks)
 
-Hardware Interface: Jetson.GPIO (or other compatible GPIO library)
+---
 
-Scheduling: schedule
+## 🤝 Contributing
 
-Frontend: HTML, CSS, JavaScript (no external frameworks)
+Contributions are welcome!
 
-🤝 Contributing
-Contributions are welcome! If you have ideas for new features, improvements, or bug fixes, please feel free to:
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Make changes
+4. Commit: `git commit -m 'Add some feature'`
+5. Push and open a pull request
 
-Fork the repository.
+---
 
-Create a new branch (git checkout -b feature/your-feature-name).
-
-Make your changes.
-
-Commit your changes (`git commit -m 'Add some feature
+**Bring powerful, private AI to your home—on your terms.**

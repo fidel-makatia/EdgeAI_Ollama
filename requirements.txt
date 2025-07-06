@@ -1,0 +1,17 @@
+# ollama: Python client for interacting with Ollama models
+ollama
+
+# flask: Lightweight web application framework
+flask
+
+# flask-cors: Extension for handling Cross-Origin Resource Sharing (CORS) in Flask apps
+flask-cors
+
+# schedule: Job scheduling for periodic tasks (e.g., cron-like jobs)
+schedule
+
+# Jetson.GPIO: GPIO interface library for NVIDIA Jetson boards
+Jetson.GPIO
+
+# adafruit-circuitpython-dht: Library for DHT temperature/humidity sensors (CircuitPython)
+adafruit-circuitpython-dht

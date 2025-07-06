@@ -26,7 +26,7 @@ A **privacy-focused, local-first smart home assistant** designed for ARM-based e
 
 ---
 
-<<<<<<< HEAD
+
 ## 🖥️ Web Dashboard & API
 =======
 # ✨ Features
@@ -51,7 +51,7 @@ Local First, Privacy-Focused: All command processing is done locally using Ollam
 
 ## 📊 Performance Metrics
 
-<<<<<<< HEAD
+
 ![Performance Stats](assets/stats.png)
 =======
 # 🖥️ Web Dashboard & API

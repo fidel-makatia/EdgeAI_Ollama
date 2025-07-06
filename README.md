@@ -92,8 +92,7 @@ The assistant includes a web-based dashboard and a comprehensive API, allowing f
 | Metric         | Value    | Description                           |
 | -------------- | -------- | ------------------------------------- |
 | Tokens/Second  | ~12.0    | Deepseek LLM generation speed         |
-| Avg. Latency   | ~1–8s    | Command processing time               |
-| Power Usage    | ~60–140W | Depends on active devices             |
+| Avg. Latency   | ~1–8s    | Command processing time               |             |
 | Cache Hit Rate | ~5–15%   | Reduces latency for repeated commands |
 
 ---
